@@ -1,9 +1,11 @@
 import express from "express"
+import bookRouter from "./book_route.js"
 
 let myOwnServer = express()
 
 //adding capability to parse accept json data
 myOwnServer.use(express.json())
+myOwnServer.use("/book", bookRouter)
 
 //get rule
 myOwnServer.get("/who-are-you", (request, response) => {
