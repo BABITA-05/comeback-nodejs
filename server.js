@@ -1,5 +1,5 @@
 import express from "express"
-import bookRouter from "./book_route.js"
+import bookRouter from "./routes/book_route.js"
 import { loggerMiddleware } from "./middlewares/my_middleware.js"
 import {xHeaderMiddleware} from "./middlewares/my_middleware.js"
 
