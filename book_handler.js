@@ -13,11 +13,15 @@ let books = [
 
     }
 ]
-export let GetAllBooks = (req, res)=>{
-    res.status(200).json({
+export let GetAllBooks = (req, res, next)=>{
+    next({
         message:"all books fetched successfully",
         data:books
     })
+    // res.status(200).json({
+    //     message:"all books fetched successfully",
+    //     data:books
+    // })
 }
 
 export let GetBookById = (req, res)=>{
@@ -82,4 +86,5 @@ export let DeleteBook = (req, res)=>{
         data:books
     })
 }
+
 
